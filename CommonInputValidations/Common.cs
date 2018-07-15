@@ -24,7 +24,7 @@ namespace CommonInputValidations
             return r.IsMatch(input) ? true : false;
         }
         
-        /// Checks for Ilegal char's in input string.
+        //Checks for Ilegal char's in input string.
         public static bool HasSpecialChar(string specialCharList, string input)
         {
             foreach (var item in specialCharList)
