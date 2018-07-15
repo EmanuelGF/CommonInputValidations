@@ -51,5 +51,12 @@ namespace CommonInputValidations
         {
             return Regex.Replace(input, @"\s+", "");
         }
+
+        //Check if string contains only letters.
+        public static bool IsOnlyLetters(string input)
+        {
+            Regex r = new Regex("^[a-zA-Z]*$");
+            return r.IsMatch(input) ? true : false;
+        }
     }
 }

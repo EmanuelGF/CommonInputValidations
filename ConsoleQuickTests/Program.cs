@@ -11,9 +11,9 @@ namespace ConsoleQuickTests
     {
         static void Main(string[] args)
         {
-            string text = " elkjfs we5161jfw wk wf ";
+            
 
-            Console.WriteLine(Common.RemoveWhiteSpaces(text));
+            Console.WriteLine();
             Console.ReadLine();
         }
     }

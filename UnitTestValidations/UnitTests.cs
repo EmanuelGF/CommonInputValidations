@@ -13,10 +13,10 @@ namespace UnitTestValidations
     [TestFixture]
     public class UnitTests
     {
-        //[Test]
-        //public void IsAllNumbers()
-        //{
-        //    Assert.That(.isPhoneNumberPT("969920456"), Is.EqualTo(true));
-        //}
+        [Test]
+        public void IsAllNumbers()
+        {
+            Assert.That(CommonPT.IsPhoneNumberPT("289920456"), Is.EqualTo(true));
+        }
     }
 }
