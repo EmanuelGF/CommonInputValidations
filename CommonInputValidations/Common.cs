@@ -20,8 +20,8 @@ namespace CommonInputValidations
         //Basic Email check using regular expression.
         public static bool IsEmail(string input)
         {
-            Regex r = new Regex(@"^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})$");
-            return r.IsMatch(input) ? true : false;
+            Regex pattern = new Regex(@"^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})$");
+            return pattern.IsMatch(input) ? true : false;
         }
         
         //Checks for Ilegal char's in input string.
@@ -38,7 +38,6 @@ namespace CommonInputValidations
         public static string ReturnSpecialChar(string specialCharList, string input)
         {
             string message = "";
-
             foreach (var item in specialCharList)
             {
                 if (input.Contains(item)) message += item.ToString();
@@ -46,7 +45,7 @@ namespace CommonInputValidations
             return message;
         }
 
-        //Remove all white space.
+        //Remove all white space from a given string.
         public static string RemoveWhiteSpaces(string input)
         {
             return Regex.Replace(input, @"\s+", "");
@@ -55,8 +54,8 @@ namespace CommonInputValidations
         //Check if string contains only letters.
         public static bool IsOnlyLetters(string input)
         {
-            Regex r = new Regex("^[a-zA-Z]*$");
-            return r.IsMatch(input) ? true : false;
+            Regex pattern = new Regex("^[a-zA-Z]*$");
+            return pattern.IsMatch(input) ? true : false;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace ConsoleQuickTests
     {
         static void Main(string[] args)
         {
-            string ptcode = "8100--285";
+            string ptcode = "8100-285";
 
 
             Console.WriteLine(CommonPT.IsPostalCodePT(ptcode));
