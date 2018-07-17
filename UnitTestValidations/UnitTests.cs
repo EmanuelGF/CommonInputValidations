@@ -14,7 +14,7 @@ namespace UnitTestValidations
     public class UnitTests
     {
         [Test]
-        public void IsAllNumbers()
+        public void IsValidPT()
         {
             Assert.That(CommonPT.IsPhoneNumberPT("289920456"), Is.EqualTo(true));
         }

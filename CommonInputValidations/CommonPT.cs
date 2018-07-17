@@ -15,12 +15,18 @@ namespace CommonInputValidations
 
     public static class CommonPT
     {
-
-        //Check if is a valid Portuguese phone number.
+        //Check if is a valid Portuguese phone number pattern.
         public static bool IsPhoneNumberPT(string number)
         {
             Regex num = new Regex(@"^[2|9|8|7]\d{8}$");
             return num.IsMatch(number) ? true : false;
+        }
+
+        //Check if is a valid Portuguese Postal Code Pattern. (eg. 8125-153)
+        public static bool IsPostalCodePT(string ptcode)
+        {
+            Regex value = new Regex(@"^([\d]{4})[-]{1}([\d]{3})$");
+            return value.IsMatch(ptcode); 
         }
     }
 }
