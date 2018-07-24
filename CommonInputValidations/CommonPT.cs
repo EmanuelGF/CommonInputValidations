@@ -16,25 +16,41 @@ namespace CommonInputValidations
 
     public static class CommonPT
     {
-        //Check if is a valid Portuguese phone number pattern.
+        /// <summary>
+        /// Check if is a valid Portuguese phone number pattern.
+        /// </summary>
         public static bool IsPhoneNumberPT(string pnumber)
         {
             Regex num = new Regex(@"^[2|9|8|7]\d{8}$");
             return num.IsMatch(pnumber) ? true : false;
         }
 
-        //Check if is a valid Portuguese Postal Code Pattern. (eg. 8125-153)
+
+        /// <summary>
+        /// Check if is a valid Portuguese Postal Code Pattern. (eg. 8125-153)
+        /// </summary>
         public static bool IsPostalCodePT(string ptcode)
         {
             Regex pattern = new Regex(@"^([\d]{4})[-]{1}([\d]{3})$");
             return pattern.IsMatch(ptcode); 
         }
 
-        //Check if its a valid Portuguese fiscal number.
+        /// <summary>
+        /// Check if its a valid Portuguese fiscal number.
+        /// </summary>
         public static bool IsFiscaNumberPT(string ssn)
         {
             Regex pattern = new Regex(@"^([1|2|5|6|7|9])\d{8}$");
             return pattern.IsMatch(ssn);
+        }
+
+        /// <summary>
+        /// Check if its a valid Portuguese Social Security number.
+        /// </summary>
+        public static bool IsSocialSecurityNumPT(string niss)
+        {
+            Regex pattern = new Regex(@"^([1])\d{10}$");
+            return pattern.IsMatch(niss);
         }
     }
 }

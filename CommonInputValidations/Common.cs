@@ -17,14 +17,18 @@ namespace CommonInputValidations
     public static class Common
     {
 
-        //Basic Email check using regular expression.
+        /// <summary>
+        /// Basic Email check using regular expression.
+        /// </summary>
         public static bool IsEmail(string input)
         {
             Regex pattern = new Regex(@"^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})$");
             return pattern.IsMatch(input) ? true : false;
         }
-        
-        //Checks for Ilegal char's in input string.
+
+        /// <summary>
+        /// Checks for Ilegal char's in input string.
+        /// </summary>
         public static bool HasSpecialChar(string specialCharList, string input)
         {
             foreach (var item in specialCharList)
@@ -34,7 +38,9 @@ namespace CommonInputValidations
             return false;
         }
 
-        // Returns any special Char in a given string.
+        /// <summary>
+        /// Returns any special Char in a given string.
+        /// </summary>
         public static string ReturnSpecialChar(string specialCharList, string input)
         {
             string message = "";
@@ -45,17 +51,22 @@ namespace CommonInputValidations
             return message;
         }
 
-        //Remove all white space from a given string.
+        /// <summary>
+        /// Remove all white space from a given string.
+        /// </summary>
         public static string RemoveWhiteSpaces(string input)
         {
             return Regex.Replace(input, @"\s+", "");
         }
 
-        //Check if string contains only letters.
+        /// <summary>
+        /// Check if string contains only letters.
+        /// </summary>
         public static bool IsOnlyLetters(string input)
         {
             Regex pattern = new Regex("^[a-zA-Z]*$");
             return pattern.IsMatch(input) ? true : false;
         }
+
     }
 }

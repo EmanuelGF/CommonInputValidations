@@ -11,10 +11,9 @@ namespace ConsoleQuickTests
     {
         static void Main(string[] args)
         {
-            string ptcode = "8100-285";
+            string testValue = "11223355448";
 
-
-            Console.WriteLine(CommonPT.IsPostalCodePT(ptcode));
+            Console.WriteLine(CommonPT.IsFiscaNumberPT(testValue));
             Console.ReadLine();
         }
     }
